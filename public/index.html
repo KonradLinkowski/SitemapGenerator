@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Auto guest book">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitemap Generator</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/public.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__title">Sitemap Generator</h1>
+  </header>
+  <main class="container">
+    <form id="form" class="url-box">
+      <label class="url-box__label" for="site-url">Site url:</label>
+      <div class="url-box__wrapper">
+        <input class="url-box__text-field" id="site-url" type="url" placeholder="https://google.com" minlength="3">
+        <button class="url-box__submit" id="submit-button">Scan</button>
+      </div>
+    </form>
+    <div class="json" id="json"></div>
+    <div id="spinner" class="spinner">
+      <svg class="spinner__circle" viewBox="0 0 50 50">
+        <circle class="spinner__path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+      </svg>
+    </div>
+  </main>
+  <script src="assets/public.js"></script>
+</body>
+</html>
