@@ -5,6 +5,7 @@
   const $json = document.querySelector('#json')
   const $spinner = document.querySelector('#spinner')
   $spinner.hidden = true
+  let network = null
 
   const getColor = status => {
     const colors = {
@@ -60,7 +61,10 @@
   const scanWebiste = async url => {
     $spinner.hidden = false
     const json = await (await fetch(`scan?url=${url}`)).json()
-    const network = new vis.Network($json, {
+    if (network) {
+      network.destro()
+    }
+    network = new vis.Network($json, {
       nodes: getNodes(json),
       edges: getEdges(json)
     }, {})
