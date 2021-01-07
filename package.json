@@ -10,7 +10,7 @@
     "dev": "nodemon lib/index.js"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "express": "^4.17.1",
     "jsdom": "^16.2.2",
     "uuid": "^7.0.3"
